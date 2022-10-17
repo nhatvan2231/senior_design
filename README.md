@@ -4,14 +4,14 @@ senior design project on RNG
 open terminal
 
 go into the directory
-'''
+
 sts-2.1.2/sts-2.1.2/
 make
-'''
+
 wait for it to finish
 
 run NIST program type
 
-'''
+
 ./assess [args]
-'''
+
