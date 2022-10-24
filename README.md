@@ -9,16 +9,16 @@ This repository contains the source code to generate PRMG and NIST file
 * unzip the file 
 * open terminal and go to the directory of the file
 * type for the following command on terminal:
-'''
+```
 cd sts-2.1.2/sts-2.1.2/
 make
-'''
+```
 * complete
 
 ### how to run sts-2.1.2 Linux/MacOS
 * open terminal
 * go into the directory
 * to run NIST program type
-'''
+```
 ./assess [args]
-'''
+```
