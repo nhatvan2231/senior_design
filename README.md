@@ -25,6 +25,6 @@ cd sts-2.1.2/sts-2.1.2/
 * to run sts-2.1.2 with input file
 ```
 ./assess [args]
-0 //for input file
-/senior_design/<FRMG method>/<file name>.txt //choose input file
+0
+/senior_design/<FRMG method>/<file name>.txt 
 ```
