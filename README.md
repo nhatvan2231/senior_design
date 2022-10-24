@@ -17,8 +17,14 @@ make
 
 ### how to run sts-2.1.2 Linux/MacOS
 * open terminal
-* go into the directory
-* to run NIST program type
+* go into the directory and run NIST program
+```
+cd sts-2.1.2/sts-2.1.2/
+./assess [args]
+```
+* to run sts-2.1.2 with input file
 ```
 ./assess [args]
+0
+/senior_design/<FRMG method>/<file name>.txt 
 ```
