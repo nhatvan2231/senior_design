@@ -1,17 +1,24 @@
 # senior_design
 senior design project on RNG
-# how to run sts-2.1.2 Linux/MacOS
-open terminal
 
-go into the directory
+### Description
+This repository contains the source code to generate PRMG and NIST file
 
-sts-2.1.2/sts-2.1.2/
+### Install NIST sts-2.1.2
+[Clink on this link](https://csrc.nist.gov/CSRC/media/Projects/Random-Bit-Generation/documents/sts-2_1_2.zip)
+* unzip the file 
+* open terminal and go to the directory of the file
+* type for the following command on terminal:
+'''
+cd sts-2.1.2/sts-2.1.2/
 make
+'''
+* complete
 
-wait for it to finish
-
-run NIST program type
-
-
+### how to run sts-2.1.2 Linux/MacOS
+* open terminal
+* go into the directory
+* to run NIST program type
+'''
 ./assess [args]
-
+'''
