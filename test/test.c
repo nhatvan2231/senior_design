@@ -9,7 +9,7 @@ void main() {
 	int counter = 0;
 	file = fopen("test.txt", "w+");
 
-	for (int i = 0; i < 1000000; i++){
+	for (int i = 0; i < 20000000; i++){
 		r = rand()%2;
 		fprintf(file, "%d", r);
 		counter++;
