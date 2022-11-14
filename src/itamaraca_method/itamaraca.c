@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <stdlib.h>
+#include <stdlib.h>
 #include <stdint.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -8,45 +8,46 @@
 
 int sabs(int);
 int main() {
-	//double root = 1.9384; //sqrt(1<x<4)
-	//const signed char N = INT8_MAX; //max interger for 8 bit
 	unsigned char byte;
-	//signed char s0 = 93;
-	//signed char s1 = 55;
-	//signed char s2 = 16;
-	//signed char pn = 0;
-	//signed char result = 0;
 	int file;
-	//file = open("../../data/itamaraca_method.txt", O_WRONLY);
 	file = open("input.txt", O_WRONLY);
-	
-	
-	const double N = 10000;
-	double s0 = 4120;
-	double s1 = 1300;
-	double s2 = 490;
+	const double N = 127;
+	double s0 = 29;
+	double s1 = 122;
+	double s2 = 4;
 	double pn = 0;
 	int result = 0;
-	//unsigned long result;
 	double root = sqrt(3.9);
-	for (int j= 10; j < 11; j++){
-		//root += 0.0001;
-		for (int i=0; i<10; i++){
-			pn = sabs(s2 - s1 + s1 - s0);
-			result = sabs((N-(pn*root)));
-			//byte = result & 0xFF;
-			printf("%d\n", result);
-			//write(file, &byte, sizeof(unsigned char));
-			s0 = s1;
-			s1 = s2;
-			s2 = result;
-		}
-	}
-}
+	int num[128]={0};
+	int x=0;
+	int y;
+	int ones=0;
+	int zeros=0;
+	int temp;
+	double prob = 0;
+	for (int i=0; i<100000; i++){
+		pn = abs(s2 - s0);
+		result = abs((N-(round(pn*1.87))));
 
-int sabs(int num){
-	if (num == INT8_MIN)
-		return (INT8_MAX);
-	else
-		return (num<0? -num:num);
-}	
+		for(int j=0; j<8;j++){
+			temp =result;
+			y=temp%2;
+			temp/=2;
+			if(y==0) zeros++;
+			if(y==1) ones++;
+		}
+			
+		x = result%128;
+		num[x]++;
+		s0 = s1;
+		s1 = s2;
+		s2 = result;
+	}
+	for(int i = 0; i<128;i++){
+		printf("%d: %d\n",i,num[i]);
+	}
+
+	printf("zeros:%d ones:%d\n", zeros, ones);
+	prob = (double)((double)zeros/(double)(zeros+ones));
+	printf("probability: %f\n", prob);
+}
