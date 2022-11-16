@@ -7,7 +7,7 @@ int main(){
 	unsigned long m, z, a, c, temp, bin;
 	m = 65536;
 	a = 114;
-	c = 32;
+	c = 338;
 	unsigned char byte;
 	int file = open("input.txt", O_WRONLY);
 	for (int i=10; i<110; i++){
@@ -17,7 +17,7 @@ int main(){
 			byte = z&0xFF;
 			write(file, &byte, sizeof(unsigned char));
 			//printf("%x\n",byte);
-			//printf("%d\n",z);
+			printf("%d\n",z);
 		//	temp =z;
 	//		for(int i=0;i<8;i++){
 	//			bin = temp%2;
