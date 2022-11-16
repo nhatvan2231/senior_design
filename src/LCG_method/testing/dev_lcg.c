@@ -4,6 +4,7 @@
 #include <fcntl.h>
 #include <inttypes.h>
 
+
 int main(){
 	//int file = open("input.txt", O_WRONLY);
 //	int m, z, a, c;
@@ -19,7 +20,6 @@ int main(){
 	FILE *file;
 	unsigned char mask = 1;
 	float prob;
-
 	file = fopen("zac.txt", "w");
 	for (int i=10; i<15; i++){
 		for(a=0; a<m; a++){
@@ -27,20 +27,20 @@ int main(){
 				z = i;
 				zeros = 0;
 				ones = 0;
-				for(int j=0; j<100000; j++){
-					z = (a*z+c) % m;
-				//	printf("%d\n",z);
-					for(int k = 0; k<8; k++){
-						(z & (a<<k)==1)? ones++:zeros++;
+				for(int j=0; j<1000000; j++){
+					z = (a*z+c) & m;
+					for(unsigned char k = 0; k<8; k++){
+						(((z >> k) & 1)==1)? ones++:zeros++;
 					}
 				}
 			        prob = (float)((float)zeros/(float)(zeros+ones));
 				if((prob > 0.45) && (prob < 0.55)){
 					fprintf(file, "%d\t%d\n", a, c);
-				//	printf("%d\t%d\n",a,c);
 				}
 
 			}
 		}
 	}	
 }
+
+
