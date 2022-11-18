@@ -49,7 +49,7 @@ void *calc(void *param){
 				}
 				prob = (float)((float)zeros/(float)(zeros+ones));
 				if((prob > 0.45) && (prob < 0.55)){
-					fprintf(file, "%d\t%d\n", a, c);
+					fprintf(file, "%d,%d,%d\n",z, a, c);
 				}
 			}
 		}

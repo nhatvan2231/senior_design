@@ -7,16 +7,17 @@
 int main(){
 	//unsigned long m, z, a, c, temp, bin;
 	uint8_t m,a,c;
-	unsigned long z = 25;
-	a = 45;
-	c = 215;
+	unsigned long z;
+	a = 227;
+	c = 0;
+	unsigned char byte;
 	int file = open("input.txt", O_WRONLY);
-	//for (int i=10; i<110; i++){
-	//	z = i;
-		for(int j=0; j<12500000; j++){
-			z = (a*z+c) & 0xFF;
-		//	printf("%x\n",z);
-			write(file, &z, sizeof(unsigned char));
+	for (int i=20; i<220; i++){
+		z = 2*i+1;
+		for(int j=0; j<125000; j++){
+			z = (a*z+c) %(0xFFF1);
+			byte = (z>>8) & 0xFF;
+			write(file, &byte, sizeof(unsigned char));
 		}
-//	}	
+	}	
 }
