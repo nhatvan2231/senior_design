@@ -6,9 +6,9 @@
 
 int main(){
 	//unsigned long m, z, a, c, temp, bin;
-	uint8_t m,a,c;
+	uint16_t m,a,c;
 	unsigned long z;
-	a = 227;
+	a = 485;
 	c = 0;
 	unsigned char byte;
 	int file = open("input.txt", O_WRONLY);
