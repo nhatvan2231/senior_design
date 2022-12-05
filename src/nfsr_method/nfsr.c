@@ -25,5 +25,4 @@ void main(){
 		nfsr = (nfsr >> 1) | (bit << 31);
 		fprintf(file, "%d", bit);
 	}
-	
 }

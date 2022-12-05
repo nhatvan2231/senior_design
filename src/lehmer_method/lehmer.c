@@ -3,10 +3,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-//the first iteration is the seed
-//multip by a multiplier
-//module of a prime number
-
 void main() {
 	unsigned long num = 10;
 	unsigned char bytes;
