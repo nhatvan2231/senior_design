@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ps / 10fs
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -24,21 +24,18 @@ module nfsr(
     input clk,
     input en,
     input [31:0] seed,
-    output reg [31:0] nfsr,
+    input reg [31:0] nfsr,
     output reg out);
     
     
     //reg [31:0] nfsr;
     reg        b;
     
-    always @(posedge clk) begin
-        if (en == 1'b1) begin
-            nfsr <= seed;
-        end
+    always @(en) begin
+        nfsr = seed;
     end
-
+    
     always @(posedge clk) begin
-        for (int i = 0; i < 10000; i++) begin
             b = ((nfsr>>0)
                     ^(nfsr>>2)
                     ^(nfsr>>6)
@@ -54,9 +51,6 @@ module nfsr(
                     ) & 1'b1;
                    
               nfsr = (nfsr >> 1) | (b << 31);
-              out <= b;
-            
-        end
-        
+              out <= b;  
     end
 endmodule
