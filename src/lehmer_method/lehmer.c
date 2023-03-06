@@ -9,10 +9,12 @@ void main() {
 	int file;
 	file = open("../../data/lehmer_method.txt", O_WRONLY);
 	//file = open("lehmer_method.txt", O_WRONLY);
+
 	if(!file){
 		printf("Error\n");
 		return;
 	}
+
 	for (int j = 10; j < 110; j++){
 		num = j;
 		for (int i = 0; i < 125000; i++){

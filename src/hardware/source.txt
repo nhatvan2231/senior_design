@@ -1,0 +1,21 @@
+module nfsr(clk, resetn, seed, o);
+  input clk;
+  input resetn;
+  input i;
+  output o;
+
+  reg [31:0] nfsr;
+  reg bit;
+  nfsr = seed; 
+  assign o = nfsr[0];
+
+  always @ (posedge clk) begin
+    bit <= nfsr[0] ^ nfsr[2] ^ nfsr[6] ^ nfsr[7] ^ nfsr[12] ^ nfsr[17] ^ nfsr[20] ^ nfsr[27] ^ nfsr[30] ^ (nfsr[3] & nfsr[9]) ^ (nfsr[12] & nfsr[15]) ^ (nfsr[4] & nfsr[5] & nfsr[16]);
+    for (int i = 0; i < 32; i+=1) begin
+     nfsr[i+1] <= nfsr[i];
+    end
+    nfsr[0] <= bit;
+		o <= bit;
+endmodule
+
+
