@@ -1,0 +1,8 @@
+*.pdf
+sts-2.1.2/
+data/
+src/fpga_practice/
+src/nfsr_fpga.cache/
+src/nfsr_fpga.ip_user_files/
+src/nfsr_fpga.hw/
+src/nfsr_fpga.runs/
