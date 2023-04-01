@@ -97,10 +97,8 @@ module simple_tx(
               end
               else if(txif.valid) begin
                  state    <= STT_DATA;
-                 sig_r    <= 0;
-                 data_r   <= txif.data;
-                 ready_r  <= 0;
-                 data_cnt <= 0;
+                 tx_sig   <= ;
+                 index <= 0;
                  clk_cnt  <= PULSE_WIDTH;
               end
            end
