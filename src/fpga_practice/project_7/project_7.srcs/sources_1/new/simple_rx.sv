@@ -21,6 +21,9 @@
 
 
 module simple_rx(
-
+    input sig,
+    output LED
     );
+
+    assign LED = sig;
 endmodule
