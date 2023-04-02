@@ -1,7 +1,10 @@
 *.pdf
 sts-2.1.2/
 data/
-src/fpga_practice/
+src/fpga_practice/project_*/project_*.cache
+src/fpga_practice/project_*/project_*.hw
+src/fpga_practice/project_*/project_*.ip_user_files
+src/fpga_practice/project_*/project_*.runs
 src/nfsr_fpga.cache/
 src/nfsr_fpga.ip_user_files/
 src/nfsr_fpga.hw/
