@@ -4,7 +4,11 @@ data/
 src/fpga_practice/project_*/project_*.cache
 src/fpga_practice/project_*/project_*.hw
 src/fpga_practice/project_*/project_*.ip_user_files
-src/fpga_practice/project_*/project_*.runs
+src/fpga_practice/project_*/project_*.sim
+src/fpga_practice/custom_uart_tx/custom_uart_tx.cache
+src/fpga_practice/custom_uart_tx/custom_uart_tx.hw
+src/fpga_practice/custom_uart_tx/custom_uart_tx.ip_user_files
+src/fpga_practice/custom_uart_tx/custom_uart_tx.sim
 src/nfsr_fpga.cache/
 src/nfsr_fpga.ip_user_files/
 src/nfsr_fpga.hw/
