@@ -1,9 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module custom_uart_tx
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'transmit' is not allowed [/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv:32]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'clk' is not allowed [/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv:33]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'data' is not allowed [/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv:34]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'tx_sig' is not allowed [/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv:35]
-WARNING: [VRFC 10-9336] redeclaration of ANSI port 'ready' is not allowed [/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv:37]
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sim_1/new/test_tb.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_tb

@@ -1,7 +1,7 @@
-Running: xsim.dir/nfsr_tb_behav/xsimk -simmode gui -wdb nfsr_tb_behav.wdb -simrunnum 0 -socket 48377
+Running: xsim.dir/nfsr_tb_behav/xsimk -simmode gui -wdb nfsr_tb_behav.wdb -simrunnum 0 -socket 35895
 Design successfully loaded
-Design Loading Memory Usage: 29120 KB (Peak: 29708 KB)
-Design Loading CPU Usage: 30 ms
+Design Loading Memory Usage: 29120 KB (Peak: 29724 KB)
+Design Loading CPU Usage: 10 ms
 Simulation completed
 Simulation Memory Usage: 111116 KB (Peak: 168388 KB)
-Simulation CPU Usage: 380 ms
+Simulation CPU Usage: 150 ms

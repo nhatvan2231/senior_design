@@ -1,0 +1,57 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Apr  3 21:55:54 2023
+# Process ID: 5711
+# Current directory: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.runs/synth_1
+# Command line: vivado -log uart.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart.tcl
+# Log file: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.runs/synth_1/uart.vds
+# Journal file: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.runs/synth_1/vivado.jou
+# Running On: Deez, OS: Linux, CPU Frequency: 2000.000 MHz, CPU Physical cores: 8, Host memory: 7666 MB
+#-----------------------------------------------------------
+source uart.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1312.863 ; gain = 0.023 ; free physical = 2355 ; free virtual = 13169
+Command: synth_design -top uart -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5754
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1951.922 ; gain = 371.770 ; free physical = 1547 ; free virtual = 12361
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1382.037; parent = 1169.322; children = 212.715
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2934.328; parent = 1951.926; children = 982.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'uart' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'uart_if' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'uart_if' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_if' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'uart_if' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_if' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'uart_if' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'uart_if' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'uart_if' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_if.sv:22]
+WARNING: [Synth 8-6104] Input port 'rxif\.sig' has an internal driver [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart.sv:21]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_tx.sv:1]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLK_FREQ bound to: 100000000 - type: integer 
+ERROR: [Synth 8-2916] unconnected interface port 'txif' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart.sv:25]
+ERROR: [Synth 8-6156] failed synthesizing module 'uart_tx' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart_tx.sv:1]
+ERROR: [Synth 8-6156] failed synthesizing module 'uart' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_8/project_8.srcs/sources_1/imports/src/uart.sv:2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2017.891 ; gain = 437.738 ; free physical = 1460 ; free virtual = 12274
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1475.689; parent = 1263.059; children = 212.715
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3000.297; parent = 2017.895; children = 982.402
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 2 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  3 21:56:18 2023...
