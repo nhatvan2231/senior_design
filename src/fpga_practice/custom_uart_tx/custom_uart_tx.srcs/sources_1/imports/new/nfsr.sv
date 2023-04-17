@@ -21,69 +21,56 @@
 
 module nfsr(
     input clk,
-    input en,
+    //input en,
+    input rstn,
     input pause,
-    input complete,
-    input seed,
     output nfsr_data,
-    output out
+    output iout,
+    output oout
     );
     
     
     
     logic en; 
     logic pause;
-    logic complete;
-    logic [31:0] seed;
-    
     logic [31:0] nfsr_data;
-    logic nfsr_status;
-    logic out;
+    logic [31:0] seed = 32'hace1;
     
-    logic b;
+    logic [31:0] nfsr;
+    //logic out;
+    logic iout, oout;
+
+    
+    logic ibit, obit;
     logic [31:0] nfsr;
 
 
-    typedef enum logic {NFSR_I,
-                    NFSR_R
-                    } statetype;
-    statetype state;
-
     always_ff @(posedge clk) begin
-        case (state) 
-            NFSR_I: begin
-                if (en) begin
-                    nfsr <= seed;
-                    state <= NFSR_R;
-                end
-            end
-            NFSR_R: begin
-                if (complete) begin
-                    state <= NFSR_I;
-                end
-                else if (!pause) begin
-                        b = ((nfsr>>0)
-                                ^(nfsr>>2)
-                                ^(nfsr>>6)
-                                ^(nfsr>>7)
-                                ^(nfsr>>12)
-                                ^(nfsr>>17)
-                                ^(nfsr>>20)
-                                ^(nfsr>>27)
-                                ^(nfsr>>30)
-                                ^((nfsr>>3)&(nfsr>>9))
-                                ^((nfsr>>12)&(nfsr>>15))
-                                ^((nfsr>>4)&(nfsr>>5)&(nfsr>>16))
-                                ) & 1'b1;
-                               
-                          nfsr = (nfsr >> 1) | (b << 31);
-                 end  
-            end
-            default: begin     
-                state <= NFSR_I;
-            end
-        endcase  
+        if(!rstn) begin
+            nfsr <= seed;
+        end
+        else begin
+            if (!pause) begin
+                    obit = nfsr & 1'b1;
+                    ibit = ((nfsr>>0)
+                            ^(nfsr>>2)
+                            ^(nfsr>>6)
+                            ^(nfsr>>7)
+                            ^(nfsr>>12)
+                            ^(nfsr>>17)
+                            ^(nfsr>>20)
+                            ^(nfsr>>27)
+                            ^(nfsr>>30)
+                            ^((nfsr>>3)&(nfsr>>9))
+                            ^((nfsr>>12)&(nfsr>>15))
+                            ^((nfsr>>4)&(nfsr>>5)&(nfsr>>16))
+                            ) & 1'b1;
+                           
+                     nfsr = (nfsr >> 1) | (ibit << 31);
+             end
+         end  
     end
     assign nfsr_data = nfsr;
-    assign out = b;
+    assign oout = obit;
+    assign iout = ibit;
 endmodule

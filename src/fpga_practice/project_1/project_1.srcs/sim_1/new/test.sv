@@ -27,6 +27,7 @@ logic clk = 0;
 logic tx;
 logic rstn = 0;
 logic [7:0] data;
+
 simple_tx tb(.clk(clk),
             .rstn(rstn),
             .SW(SW),

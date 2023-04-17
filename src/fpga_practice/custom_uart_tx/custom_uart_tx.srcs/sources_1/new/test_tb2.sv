@@ -32,6 +32,6 @@ module test_tb2(
     logic out;
     always #5 clk <= ~clk;
     //initial #20 en <= 1;
-    main utt(.clk(clk), .rstn(), .nfsr_en(en), .tx_sig(sig));
+    main utt(.clk(clk), .rstn(), .tx_sig(sig));
     //nfsr a(.clk(clk), .en(en), .seed(seed), .pause(pause), .out(out));
 endmodule

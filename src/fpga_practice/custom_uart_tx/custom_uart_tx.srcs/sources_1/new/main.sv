@@ -31,13 +31,10 @@ module main(
     logic ready;
     
     logic nfsr_en;
-    logic [31:0] seed;
     logic pause;
     logic nfsr_out;
-    logic nfsr_complete;
     
     logic [2:0] data_cnt;
-    logic [31:0] bit_cnt = 0;
 
     
     typedef enum logic {S_DATA,
@@ -62,24 +59,21 @@ module main(
                         .complete(nfsr_complete)
                         );
                         
-    always_comb begin
-         seed <= 8'h0000ace1;
-         nfsr_en <= 1;
-    end
-    
-    always_ff@(posedge clk or negedge rstn) begin
+
+    always_ff@(posedge clk) begin
     if (!rstn) begin
         pause <= 0;
         transmit <= 0;
         nfsr_byte <= 0;
         data_cnt <= 0;
-        nfsr_complete <= 1;
-        
+        nfsr_en <= 0;
+        state <= N_DATA;
     end
     else begin
+        if (!nfsr_en) nfsr_en <= 1;
         case (state) 
             S_DATA: begin
-                if (!ready | !pause) transmit <= 0;
+                if (!ready) transmit <= 0;
                 else begin
                     transmit <= 1;
                     pause <= 0;
@@ -89,10 +83,8 @@ module main(
             N_DATA: begin
                 //nfsr until fill a byte
                 if (data_cnt < 8) begin
-                    pause <= 0;
                     nfsr_byte[data_cnt] <= nfsr_out;
                     data_cnt <= data_cnt + 1;
-                    bit_cnt <= bit_cnt + 1;
                 end
                 // pause nfsr
                 else begin

@@ -1,13 +1,14 @@
 void nfsr_method(){
-	uint32_t state0=0xACE1u;
-	uint32_t nfsr;
+	uint32_t state0=0x0000ACE1u;
+	uint32_t nfsr=state0;
 	uint32_t obit;
 	uint32_t ibit; 
 	FILE *file;
 	int counter = 0;
 	file = fopen("../../data/nfsr_result.txt", "w");
-	for(int i = 0; i < 100000000; i++){
+	for(int i = 0; i < 100; i++){
 		obit = nfsr & 1u;
+		printf("%x %d\n",nfsr,obit);
 		ibit = ((nfsr>>0)
 		^(nfsr>>2)
 		^(nfsr>>6)

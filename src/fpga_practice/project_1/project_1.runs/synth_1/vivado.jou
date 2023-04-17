@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Apr 14 23:42:20 2023
-# Process ID: 56998
-# Current directory: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_1/project_1.runs/synth_1
-# Command line: vivado -log simple_tx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple_tx.tcl
-# Log file: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_1/project_1.runs/synth_1/simple_tx.vds
-# Journal file: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_1/project_1.runs/synth_1/vivado.jou
-# Running On: Deez, OS: Linux, CPU Frequency: 2000.000 MHz, CPU Physical cores: 8, Host memory: 7666 MB
+# Start of session at: Sat Apr 15 22:46:56 2023
+# Process ID: 2583104
+# Current directory: /home/nate/Desktop/senior_design/src/fpga_practice/project_1/project_1.runs/synth_1
+# Command line: vivado -log simple_tx2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source simple_tx2.tcl
+# Log file: /home/nate/Desktop/senior_design/src/fpga_practice/project_1/project_1.runs/synth_1/simple_tx2.vds
+# Journal file: /home/nate/Desktop/senior_design/src/fpga_practice/project_1/project_1.runs/synth_1/vivado.jou
+# Running On: Deez, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 33557 MB
 #-----------------------------------------------------------
-source simple_tx.tcl -notrace
+source simple_tx2.tcl -notrace

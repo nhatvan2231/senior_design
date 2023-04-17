@@ -36,6 +36,7 @@ module simple_tx(
     logic ready;
     logic transmit;
     logic l;
+    int buffer;
     custom_uart_tx tx(  .clk(clk),
                         .rstn(rstn),
                         .data(data),
@@ -48,15 +49,20 @@ module simple_tx(
         if (!rstn) begin
             l <= 0;
             transmit <= 0;
-            data <= 0;
+            data <= 8'hff;
         end
         else begin
             l <= 1;
-            if (ready) begin
-                transmit = 1;
+            if (0 < buffer) buffer <= buffer -1;
+            else if (ready) begin
+                transmit <= 1;
                 data = data+1;
+
             end
-            else transmit <= 0;
+            else begin
+                transmit <= 0;
+                buffer <= 100;
+            end
         end 
     end
     assign rstn_led = l;

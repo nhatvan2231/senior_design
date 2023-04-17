@@ -54,7 +54,7 @@ module custom_uart_tx(
     
     statetype                 state;
     
-    always_ff@(posedge clk or negedge rstn) begin
+    always_ff@(posedge clk) begin
         // 0 trigger reset
         if(!rstn) begin
             state <= STT_IDLE;
@@ -115,7 +115,7 @@ module custom_uart_tx(
                     else begin
                         clk_cnt <= cycle_bit;
                         state <= STT_IDLE;
-                        tx_done <= 1; 
+                        //tx_done <= 1; 
                         sig <= 1;
 
                     end
