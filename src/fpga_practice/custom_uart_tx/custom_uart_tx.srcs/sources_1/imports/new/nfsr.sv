@@ -21,11 +21,10 @@
 
 module nfsr(
     input clk,
-    //input en,
     input rstn,
     input pause,
-    output nfsr_data,
-    output iout,
+    //output nfsr_data,
+    //output iout,
     output oout
     );
     
@@ -70,7 +69,7 @@ module nfsr(
              end
          end  
     end
-    assign nfsr_data = nfsr;
+    //assign nfsr_data = nfsr;
     assign oout = obit;
-    assign iout = ibit;
+    //assign iout = ibit;
 endmodule

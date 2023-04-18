@@ -1,18 +1,19 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_tb3_behav xil_defaultlib.test_tb3 xil_defaultlib.glbl -log elaborate.log 
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_tb5_behav xil_defaultlib.test_tb5 xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'nfsr_data' [/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/new/nfsr_test.sv:51]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'nfsr_data' [/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/new/main_test.sv:60]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/new/nfsr.sv" Line 22. Module nfsr doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/new/nfsr.sv" Line 22. Module nfsr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv" Line 22. Module custom_uart_tx doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv" Line 22. Module custom_uart_tx doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.nfsr
-Compiling module xil_defaultlib.nfsr_test
-Compiling module xil_defaultlib.test_tb3
+Compiling module xil_defaultlib.custom_uart_tx
+Compiling module xil_defaultlib.main_test
+Compiling module xil_defaultlib.test_tb5
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot test_tb3_behav
+Built simulation snapshot test_tb5_behav
