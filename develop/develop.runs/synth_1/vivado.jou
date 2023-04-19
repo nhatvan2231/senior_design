@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Feb 14 23:24:21 2023
+# Process ID: 1432770
+# Current directory: /home/nate/Desktop/senior_design/develop/develop.runs/synth_1
+# Command line: vivado -log ex1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ex1.tcl
+# Log file: /home/nate/Desktop/senior_design/develop/develop.runs/synth_1/ex1.vds
+# Journal file: /home/nate/Desktop/senior_design/develop/develop.runs/synth_1/vivado.jou
+# Running On: Deez, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 33557 MB
+#-----------------------------------------------------------
+source ex1.tcl -notrace

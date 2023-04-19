@@ -23,8 +23,8 @@
 module simple_tx(
     input clk,
     input rstn,
-    input logic [7:0] SW,
-    output logic [7:0] LED,
+    //input logic [7:0] SW,
+    //output logic [7:0] LED,
     output tx_sig,
     output rstn_led
     //output logic [7:0] data_o,
@@ -53,15 +53,13 @@ module simple_tx(
         end
         else begin
             l <= 1;
-            if (0 < buffer) buffer <= buffer -1;
-            else if (ready) begin
-                transmit <= 1;
-                data = data+1;
+            if (ready) begin
+                transmit = 1;
+                data <= data+1;
 
             end
             else begin
-                transmit <= 0;
-                buffer <= 100;
+                transmit = 0;
             end
         end 
     end
@@ -69,7 +67,7 @@ module simple_tx(
     //assign data_o = data;
     //assign transmit_o = transmit;
     //assign ready_o = ready;
-    assign LED = SW;
+    //assign LED = SW;
     
     
 endmodule

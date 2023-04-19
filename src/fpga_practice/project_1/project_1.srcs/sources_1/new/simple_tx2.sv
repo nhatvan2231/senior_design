@@ -4,10 +4,10 @@ module simple_tx2(
     input logic [7:0] SW,
     output logic [7:0] LED,
     output tx_sig,
-    output rstn_led
-    //output logic [7:0] data_o,
-    //output logic transmit_o,
-    //output logic ready_o
+    output rstn_led,
+    output logic [7:0] data_o,
+    output logic transmit_o,
+    output logic ready_o
     );
     
     logic [7:0] data;
@@ -43,9 +43,9 @@ module simple_tx2(
         end 
     end
     assign rstn_led = l;
-    //assign data_o = data;
-    //assign transmit_o = transmit;
-    //assign ready_o = ready;
+    assign data_o = data;
+    assign transmit_o = transmit;
+    assign ready_o = ready;
     assign LED = SW;
     
     

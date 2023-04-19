@@ -74,8 +74,6 @@ module custom_uart_tx(
                     if (0 < clk_cnt) begin
                         clk_cnt <= clk_cnt - 1;
                     end
-                    // signal 1 at idle
-                    else if (!sig) sig<=1;
                     // ready to transmit
                     else if (!tx_done) tx_done <= 1;
                     // start transmiting
@@ -114,7 +112,7 @@ module custom_uart_tx(
                     end
                     // stop bit
                     else begin
-                        clk_cnt <= cycle_bit;
+                        clk_cnt <= cycle_bit+(cycle_bit/2);
                         state <= STT_IDLE;
                         //tx_done <= 1; 
                         sig <= 1;

@@ -35,8 +35,7 @@ simple_tx tb(.clk(clk),
             .tx_sig(tx),
             .rstn_led(le),
             .data_o(data),
-            .ready_o(ready),
-            .transmit_o(transmit));
+            .ready_o(ready));
 
 always #5 clk = ~clk;
 
