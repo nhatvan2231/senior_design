@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr 20 12:02:47 2023
-# Process ID: 30113
+# Start of session at: Thu Apr 20 11:59:39 2023
+# Process ID: 29376
 # Current directory: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/impl_1
 # Command line: vivado -log main_test.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main_test.tcl -notrace
 # Log file: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/impl_1/main_test.vdi
 # Journal file: /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/impl_1/vivado.jou
-# Running On: Deez, OS: Linux, CPU Frequency: 2000.000 MHz, CPU Physical cores: 8, Host memory: 7666 MB
+# Running On: Deez, OS: Linux, CPU Frequency: 1400.000 MHz, CPU Physical cores: 8, Host memory: 7666 MB
 #-----------------------------------------------------------
 source main_test.tcl -notrace

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Tue Apr 18 20:04:28 2023
+| Date             : Thu Apr 20 11:32:15 2023
 | Host             : Deez running 64-bit Ubuntu 22.04.2 LTS
 | Command          : report_power -file simple_tx_power_routed.rpt -pb simple_tx_power_summary_routed.pb -rpx simple_tx_power_routed.rpx
 | Design           : simple_tx
@@ -53,13 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      196 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      101 |     63400 |            0.16 |
+| Slice Logic    |    <0.001 |      215 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      108 |     63400 |            0.17 |
 |   CARRY4       |    <0.001 |       12 |     15850 |            0.08 |
-|   Register     |    <0.001 |       58 |    126800 |            0.05 |
-|   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
+|   Register     |    <0.001 |       66 |    126800 |            0.05 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |      110 |       --- |             --- |
+| Signals        |    <0.001 |      123 |       --- |             --- |
 | I/O            |    <0.001 |        4 |       210 |            1.90 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.100 |          |           |                 |

@@ -32,11 +32,12 @@ module simple_tx(
     //output logic ready_o
     );
     
-    logic [7:0] data;
+    logic [7:0] data, count;
     logic ready;
     logic transmit;
     logic l;
     int buffer;
+  
     custom_uart_tx tx(  .clk(clk),
                         .rstn(rstn),
                         .data(data),
@@ -50,12 +51,21 @@ module simple_tx(
             l <= 0;
             transmit <= 0;
             data <= 8'hff;
+            count <= 0;
+            //buffer <= 32'hffff;
         end
         else begin
             l <= 1;
-            if (ready) begin
+            if (count == 8'hff) transmit <= 0;
+           // else if (0 < buffer) begin
+              //  transmit <= 0;
+               // buffer <= buffer-1;
+           // end
+            else if (ready) begin
                 transmit = 1;
                 data <= data+1;
+                count <= count + 1;
+                //buffer <= 32'hffff;
 
             end
             else begin

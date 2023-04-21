@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="/home/nate/Desktop/senior_design/src/fpga_practice/project_1/project_1.xpr">
+<Project Version="7" Minor="61" Path="/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/project_1/project_1.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="4e845fb387314d728b8e6a7038cf3b0f"/>
