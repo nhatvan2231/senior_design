@@ -72,9 +72,11 @@ module main_test(
         if (!rstn) begin
             pause <= 0;
             count <= 0;
-            buffer <= 0;
+            buffer <= 1;
             tmp <= 0;
-            transmit <= 1;
+            transmit <= 0;
+            bytes <= 0;
+            state <= PACKGING;
         end
         else begin
             if (!buffer) buffer <= 1;

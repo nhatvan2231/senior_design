@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1681772599" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1682133161" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/main.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="main_test_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="main_test.dcp"/>
   <File Type="RDS-UTIL-PB" Name="main_test_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="main_test.tcl"/>
   <File Type="RDS-UTIL" Name="main_test_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="main_test_reports.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="main_test_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="main_test.vds"/>
+  <File Type="REPORTS-TCL" Name="main_test_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="main_test_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="main_test.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/src/custom_uart_tx.sv">
