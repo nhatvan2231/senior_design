@@ -35,15 +35,14 @@ module main(
     logic pause;
     logic nfsr_bit;
     
-    logic [7:0] nfsr_byte, tmp_byte;
-    logic [2:0] byte_index;
-    logic buffer;
+    logic [7:0] nfsr_byte, tmp_byte; // packing/storing nfsr outputs
+    logic [2:0] byte_index;          // byte index
+    logic buffer;                    // 1 clk cycle buffer
 
     typedef enum logic [1:0] {  TX_SEND,
-                                PACKGING,
-                                TRANSFER
+                                STORE,
+                                PACKGING
                              }  statetype;
-
     statetype                state;
     
     nfsr_method wrapper(    .clk(clk),
@@ -72,6 +71,7 @@ module main(
             if (!buffer) buffer <= 1;
             else begin
                 case(state)
+                    //transmit data
                     TX_SEND: begin
                         if(ready) begin
                             transmit = 1;
@@ -79,18 +79,20 @@ module main(
                             state <= PACKGING;
                         end
                     end
-                    TRANSFER: begin
+                    //store temp byte to sending byte
+                    STORE: begin
                         nfsr_byte = tmp_byte;
                         state <= TX_SEND;
                     end
+                    //packing nfsr outputs to a temp byte
                     PACKGING: begin
                         if (transmit) transmit <= 0;
                         tmp_byte[byte_index] = nfsr_bit;
                         if (byte_index == 7) begin
-                            pause <= 1;
-                            state <= TRANSFER;
+                            pause <= 1; //pause nfsr
+                            state <= STORE;
                         end
-                        byte_index <= byte_index +1;
+                        byte_index <= byte_index + 1; //next bit index
                     end
                     default: begin
                         state <= PACKGING;

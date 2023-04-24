@@ -35,13 +35,14 @@ module nfsr_method(
     logic ibit, obit;
     
     always_ff @(posedge clk) begin
+        // low trigger reset
         if(!rstn) begin
             nfsr <= seed;
         end
         else begin
-            if (!pause) begin
-                    obit = nfsr & 1'b1;
-                    ibit = ((nfsr>>0)
+            if (!pause) begin                                     // pause if needed
+                    obit = nfsr & 1'b1;                           // output bit
+                    ibit = ((nfsr>>0)                             // Primitive Polynomial GF(32)
                             ^(nfsr>>2)
                             ^(nfsr>>6)
                             ^(nfsr>>7)
@@ -54,11 +55,12 @@ module nfsr_method(
                             ^((nfsr>>12)&(nfsr>>15))
                             ^((nfsr>>4)&(nfsr>>5)&(nfsr>>16))
                             ) & 1'b1;
-                           
-                     nfsr = (nfsr >> 1) | (ibit << 31);
+                     
+                     nfsr = (nfsr >> 1) | (ibit << 31);            // shift left once and insert calculted bit at most signification bit position
+
              end
          end  
     end
-    
+    // assign to port
     assign o_bit = obit;
 endmodule

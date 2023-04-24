@@ -56,7 +56,7 @@ module uart_tx(
     statetype                 state;
     
     always_ff@(posedge clk) begin
-        // 0 trigger reset
+        // low trigger reset
         if(!rstn) begin
             state <= STT_IDLE;
             sig <= 1;
