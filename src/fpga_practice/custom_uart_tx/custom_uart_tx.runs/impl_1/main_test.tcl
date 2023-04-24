@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/impl_1/main_test.tcl"
+  variable script "/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/impl_1/main_test.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,23 +122,22 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 6
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-3
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/wt [current_project]
-  set_property parent.project_path /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.xpr [current_project]
-  set_property ip_output_repo /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/wt [current_project]
+  set_property parent.project_path /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.xpr [current_project]
+  set_property ip_output_repo /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/synth_1/main_test.dcp
+  add_files -quiet /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/synth_1/main_test.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/constrs_1/imports/fpga_practice/Nexys4DDR_master.xdc
+  read_xdc /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/constrs_1/imports/fpga_practice/Nexys4DDR_master.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

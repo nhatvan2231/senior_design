@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Apr 23 22:48:30 2023
+# Process ID: 3214447
+# Current directory: /home/nate/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1
+# Command line: vivado -log nfsr_bech.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nfsr_bech.tcl
+# Log file: /home/nate/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1/nfsr_bech.vds
+# Journal file: /home/nate/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1/vivado.jou
+# Running On: Deez, OS: Linux, CPU Frequency: 2200.000 MHz, CPU Physical cores: 24, Host memory: 33557 MB
+#-----------------------------------------------------------
+source nfsr_bech.tcl -notrace

@@ -6,9 +6,10 @@ void nfsr_method(){
 	FILE *file;
 	int counter = 0;
 	file = fopen("../../data/nfsr_result.txt", "w");
-	for(int i = 0; i < 100; i++){
+
+	for(int i = 0; i < 100000000; i++){
 		obit = nfsr & 1u;
-		printf("%x %d\n",nfsr,obit);
+//		printf("%d",obit);
 		ibit = ((nfsr>>0)
 		^(nfsr>>2)
 		^(nfsr>>6)

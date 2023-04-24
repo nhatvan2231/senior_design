@@ -58,7 +58,7 @@ module main_test(
     
     //nfsr method(.clk(clk),.en(en),.pause(pause),.nfsr_data(nfsr_data),.oout(out));
     //nfsr method(.clk(clk),.rstn(rstn),.pause(pause),.nfsr_data(nfsr_data),.oout(out));
-    nfsr method(.clk(clk),.rstn(rstn),.pause(pause),.oout(out));
+    nfsr_method method(.clk(clk),.rstn(rstn),.pause(pause),.oout(out));
 
     custom_uart_tx tx(  .clk(clk),
                         .rstn(rstn),
@@ -72,10 +72,10 @@ module main_test(
         if (!rstn) begin
             pause <= 0;
             count <= 0;
-            buffer <= 1;
+            buffer <= 0;
             tmp <= 0;
             transmit <= 0;
-            bytes <= 0;
+            //bytes <= 0;
             state <= PACKGING;
         end
         else begin

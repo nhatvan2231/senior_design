@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/synth_1/main_test.tcl"
+  variable script "/home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.runs/synth_1/main_test.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,26 +70,24 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param xicom.use_bs_reader 1
-set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-3
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/wt [current_project]
-set_property parent.project_path /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.xpr [current_project]
+set_property webtalk.parent_dir /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/wt [current_project]
+set_property parent.project_path /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/ip [current_project]
+set_property ip_output_repo /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv
-  /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/new/nfsr.sv
-  /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/new/main_test.sv
+  /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/src/custom_uart_tx.sv
+  /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/imports/new/nfsr.sv
+  /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/sources_1/new/main_test.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -100,12 +98,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/constrs_1/imports/fpga_practice/Nexys4DDR_master.xdc
-set_property used_in_implementation false [get_files /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/constrs_1/imports/fpga_practice/Nexys4DDR_master.xdc]
+read_xdc /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/constrs_1/imports/fpga_practice/Nexys4DDR_master.xdc
+set_property used_in_implementation false [get_files /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/constrs_1/imports/fpga_practice/Nexys4DDR_master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/nhatvan1561/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/utils_1/imports/synth_1/main.dcp
+read_checkpoint -auto_incremental -incremental /home/nate/Desktop/senior_design/src/fpga_practice/custom_uart_tx/custom_uart_tx.srcs/utils_1/imports/synth_1/main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
