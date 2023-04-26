@@ -1,7 +1,7 @@
 import serial
 import time
 
-ser = serial.Serial('/dev/ttyUSB2', 115200)
+ser = serial.Serial('/dev/ttyUSB1', 115200)
 print("Receiving...")
 start_time = time.time()
 nfsr = ser.read(12500000) #100_000_000/8

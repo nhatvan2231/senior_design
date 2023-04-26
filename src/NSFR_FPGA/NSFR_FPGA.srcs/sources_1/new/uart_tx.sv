@@ -29,7 +29,7 @@ module uart_tx(
     output ready
     );
     
-        localparam DATA_WIDTH = 8; // typical uart data length
+    localparam DATA_WIDTH = 8; // typical uart data length
     localparam BAUD_RATE  = 115200; // buad rate
     localparam CLK_FREQ   = 100_000_000; // fpga clk frequency
     

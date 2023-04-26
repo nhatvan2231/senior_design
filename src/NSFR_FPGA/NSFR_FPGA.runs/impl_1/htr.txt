@@ -6,4 +6,4 @@
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log nfsr_bech.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nfsr_bech.tcl -notrace
+vivado -log main.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace

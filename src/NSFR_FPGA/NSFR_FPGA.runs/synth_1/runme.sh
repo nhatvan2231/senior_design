@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/tools/Vivado/2022.2/ids_lite/ISE/bin/lin64:/tools/Vivado/2022.2/bin
+  PATH=/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2022.2/bin
 else
-  PATH=/tools/Vivado/2022.2/ids_lite/ISE/bin/lin64:/tools/Vivado/2022.2/bin:$PATH
+  PATH=/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/tools/Xilinx/Vivado/2022.2/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/nate/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1'
+HD_PWD='/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log nfsr_bech.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source nfsr_bech.tcl
+EAStep vivado -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl

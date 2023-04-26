@@ -1,0 +1,377 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Apr 24 17:08:56 2023
+# Process ID: 4751
+# Current directory: /home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1
+# Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: /home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1/main.vds
+# Journal file: /home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1/vivado.jou
+# Running On: Deez, OS: Linux, CPU Frequency: 2000.000 MHz, CPU Physical cores: 8, Host memory: 7666 MB
+#-----------------------------------------------------------
+source main.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/utils_1/imports/synth_1/nfsr_bech.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/utils_1/imports/synth_1/nfsr_bech.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top main -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4785
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'pause' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/nfsr_method.sv:30]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'o_bit' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/nfsr_method.sv:31]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'clk' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:36]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'rstn' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:36]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'transmit' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:37]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'data' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:38]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'tx_sig' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:39]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'ready' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:40]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 'tx_sig' is not allowed [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/main.sv:32]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1954.379 ; gain = 372.770 ; free physical = 1056 ; free virtual = 12349
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 2936.785; parent = 1954.383; children = 982.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/main.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'nfsr_method' [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/nfsr_method.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'nfsr_method' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/nfsr_method.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'main' (0#1) [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/main.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element ibit_reg was removed.  [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/nfsr_method.sv:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2022.348 ; gain = 440.738 ; free physical = 1145 ; free virtual = 12441
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3004.754; parent = 2022.352; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2040.160 ; gain = 458.551 ; free physical = 1143 ; free virtual = 12439
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3022.566; parent = 2040.164; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2040.160 ; gain = 458.551 ; free physical = 1143 ; free virtual = 12439
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3022.566; parent = 2040.164; children = 982.402
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2040.160 ; gain = 0.000 ; free physical = 1138 ; free virtual = 12434
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/constrs_1/imports/src/Nexys4DDR_master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2195.910 ; gain = 0.000 ; free physical = 657 ; free virtual = 12263
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2195.910 ; gain = 0.000 ; free physical = 657 ; free virtual = 12263
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 209 ; free virtual = 11713
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 231 ; free virtual = 11736
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 224 ; free virtual = 11729
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 217 ; free virtual = 11727
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 217 ; free virtual = 11727
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'main'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                STT_IDLE |                              001 |                               10
+                STT_DATA |                              010 |                               00
+                STT_STOP |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                PACKGING |                              001 |                               10
+                   STORE |                              010 |                               01
+                 TX_SEND |                              100 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'main'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 233 ; free virtual = 11743
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : synth_design options have changed between reference and incremental
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	  12 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 222 ; free virtual = 11736
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1383.727; parent = 1170.970; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 235 ; free virtual = 11757
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1482.327; parent = 1270.550; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 242 ; free virtual = 11765
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.015; parent = 1272.247; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 244 ; free virtual = 11766
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.476; parent = 1272.708; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.655; parent = 1272.888; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.671; parent = 1272.903; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.687; parent = 1272.919; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.687; parent = 1272.919; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.687; parent = 1272.919; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.702; parent = 1272.935; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     1|
+|4     |LUT2   |    65|
+|5     |LUT3   |    12|
+|6     |LUT4   |     9|
+|7     |LUT5   |     5|
+|8     |LUT6   |    23|
+|9     |MUXF7  |     1|
+|10    |FDRE   |    93|
+|11    |FDSE   |    13|
+|12    |IBUF   |     2|
+|13    |OBUF   |     1|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 275 ; free virtual = 11798
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1484.733; parent = 1272.966; children = 212.757
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3146.301; parent = 2163.898; children = 982.402
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2195.910 ; gain = 458.551 ; free physical = 324 ; free virtual = 11847
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2195.910 ; gain = 614.301 ; free physical = 324 ; free virtual = 11847
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2195.910 ; gain = 0.000 ; free physical = 315 ; free virtual = 11839
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2195.910 ; gain = 0.000 ; free physical = 405 ; free virtual = 11931
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9f532bc3
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 27 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 2195.910 ; gain = 868.684 ; free physical = 612 ; free virtual = 12138
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint '/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 24 17:09:31 2023...

@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1682308107" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/nfsr_bech.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="nfsr_bech_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="nfsr_bech.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="nfsr_bech_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="nfsr_bech_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="nfsr_bech_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="nfsr_bech.vds"/>
-  <File Type="REPORTS-TCL" Name="nfsr_bech_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="nfsr_bech_timing_summary_synth.pb"/>
-  <File Type="PA-TCL" Name="nfsr_bech.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1682374132" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/nfsr_bech.dcp">
+  <File Type="VDS-TIMINGSUMMARY" Name="main_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="main.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="main_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="main_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="main_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="main.vds"/>
+  <File Type="REPORTS-TCL" Name="main_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="main_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="main.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/nfsr_bech.sv">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/nfsr_method.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,13 +20,19 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/uart_tx.sv">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/main.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/nfsr_bech.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -44,7 +42,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="nfsr_bech"/>
+      <Option Name="TopModule" Val="main"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -76,9 +74,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
