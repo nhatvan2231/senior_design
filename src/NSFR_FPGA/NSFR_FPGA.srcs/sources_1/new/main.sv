@@ -39,8 +39,7 @@ module main(
     logic [2:0] byte_index;          // byte index
     logic buffer;                    // 1 clk cycle buffer
 
-    typedef enum logic [1:0] {  TX_SEND,
-                                STORE,
+    typedef enum logic {        TX_SEND,
                                 PACKGING
                              }  statetype;
     statetype                state;
@@ -79,18 +78,15 @@ module main(
                             state <= PACKGING;
                         end
                     end
-                    //store temp byte to sending byte
-                    STORE: begin
-                        nfsr_byte = tmp_byte;
-                        state <= TX_SEND;
-                    end
-                    //packing nfsr outputs to a temp byte
                     PACKGING: begin
                         if (transmit) transmit <= 0;
                         tmp_byte[byte_index] = nfsr_bit;
                         if (byte_index == 7) begin
                             pause <= 1; //pause nfsr
-                            state <= STORE;
+                            nfsr_byte = tmp_byte;
+                            //state <= STORE;
+                            state <= TX_SEND;
+
                         end
                         byte_index <= byte_index + 1; //next bit index
                     end

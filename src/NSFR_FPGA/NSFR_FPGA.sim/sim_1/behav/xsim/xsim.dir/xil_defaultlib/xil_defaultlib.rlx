@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/main.sv,1682373862,systemVerilog,,,,main,,uvm,,,,,,
+/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/nfsr_method.sv,1682373862,systemVerilog,,/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv,,nfsr_method,,uvm,,,,,,
+/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/uart_tx.sv,1682375275,systemVerilog,,/home/nhatvan1561/Desktop/senior_design/src/NSFR_FPGA/NSFR_FPGA.srcs/sources_1/new/main.sv,,uart_tx,,uvm,,,,,,
